@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Elcerebro Force Password Reset ===
 Contributors: nwachuku
 Donate link: #
 Tags: password, reset, security
