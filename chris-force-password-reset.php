@@ -13,7 +13,7 @@
  * @package           fpr_Chris_Force_Password_Reset
  *
  * @wordpress-plugin
- * Plugin Name:       Chris Force Password Reset
+ * Plugin Name:       Elcerebro Force Password Reset
  * Plugin URI:        #
  * Description:       This plugin is designed to remind WordPress users to reset their password after certain number of days.
  * Version:           1.0.0
