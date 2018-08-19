@@ -178,8 +178,8 @@ class fpr_Chris_Force_Password_Reset {
 
 		$plugin_public = new fpr_Chris_Force_Password_Reset_Public( $this->fpr_get_plugin_name(), $this->fpr_get_version() );
 
-		$this->loader->fpr_add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
-		$this->loader->fpr_add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+		$this->loader->fpr_add_action( 'wp_enqueue_scripts', $plugin_public, 'fpr_enqueue_styles' );
+		$this->loader->fpr_add_action( 'wp_enqueue_scripts', $plugin_public, 'fpr_enqueue_scripts' );
 
 	}
 
