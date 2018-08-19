@@ -43,7 +43,7 @@ define( 'FPR_PLUGIN_NAME_VERSION', '1.0.0' );
  */
 function fpr_activate_chris_force_password_reset() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-chris-force-password-reset-activator.php';
-	fpr_Chris_Force_Password_Reset_Activator::activate();
+	fpr_Chris_Force_Password_Reset_Activator::fpr_activate();
 }
 
 /**
@@ -52,7 +52,7 @@ function fpr_activate_chris_force_password_reset() {
  */
 function fpr_deactivate_chris_force_password_reset() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-chris-force-password-reset-deactivator.php';
-	fpr_Chris_Force_Password_Reset_Deactivator::deactivate();
+	fpr_Chris_Force_Password_Reset_Deactivator::fpr_deactivate();
 }
 
 register_activation_hook( __FILE__, 'fpr_activate_chris_force_password_reset' );

@@ -29,7 +29,7 @@ class fpr_Chris_Force_Password_Reset_Deactivator {
 	 *
 	 * @since    1.0.0
 	 */
-	public static function deactivate() {
+	public static function fpr_deactivate() {
 
 
 	}

@@ -29,7 +29,7 @@ class fpr_Chris_Force_Password_Reset_Activator {
 	 *
 	 * @since    1.0.0
 	 */
-	public static function activate() {
+	public static function fpr_activate() {
 
 	}
 
