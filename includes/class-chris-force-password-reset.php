@@ -35,7 +35,7 @@ class Chris_Force_Password_Reset {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Chris_Force_Password_Reset_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      fpr_Chris_Force_Password_Reset_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -86,8 +86,8 @@ class Chris_Force_Password_Reset {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Chris_Force_Password_Reset_Loader. Orchestrates the hooks of the plugin.
-	 * - Chris_Force_Password_Reset_i18n. Defines internationalization functionality.
+	 * - fpr_Chris_Force_Password_Reset_Loader. Orchestrates the hooks of the plugin.
+	 * - fpr_Chris_Force_Password_Reset_i18n. Defines internationalization functionality.
 	 * - Chris_Force_Password_Reset_Admin. Defines all hooks for the admin area.
 	 * - Chris_Force_Password_Reset_Public. Defines all hooks for the public side of the site.
 	 *
@@ -122,14 +122,14 @@ class Chris_Force_Password_Reset {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-chris-force-password-reset-public.php';
 
-		$this->loader = new Chris_Force_Password_Reset_Loader();
+		$this->loader = new fpr_Chris_Force_Password_Reset_Loader();
 
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Chris_Force_Password_Reset_i18n class in order to set the domain and to register the hook
+	 * Uses the fpr_Chris_Force_Password_Reset_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -137,7 +137,7 @@ class Chris_Force_Password_Reset {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Chris_Force_Password_Reset_i18n();
+		$plugin_i18n = new fpr_Chris_Force_Password_Reset_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -207,7 +207,7 @@ class Chris_Force_Password_Reset {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    Chris_Force_Password_Reset_Loader    Orchestrates the hooks of the plugin.
+	 * @return    fpr_Chris_Force_Password_Reset_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;

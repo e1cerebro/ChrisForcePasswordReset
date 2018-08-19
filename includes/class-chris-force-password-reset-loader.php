@@ -21,7 +21,7 @@
  * @subpackage Chris_Force_Password_Reset/includes
  * @author     ChristianNwachukwu <nwachukwu16@gmail.com>
  */
-class Chris_Force_Password_Reset_Loader {
+class fpr_Chris_Force_Password_Reset_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.

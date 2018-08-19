@@ -24,7 +24,7 @@
  * @subpackage Chris_Force_Password_Reset/includes
  * @author     ChristianNwachukwu <nwachukwu16@gmail.com>
  */
-class Chris_Force_Password_Reset_i18n {
+class fpr_Chris_Force_Password_Reset_i18n {
 
 
 	/**
