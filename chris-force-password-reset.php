@@ -76,7 +76,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-chris-force-password-reset
 function fpr_run_chris_force_password_reset() {
 
 	$plugin = new fpr_Chris_Force_Password_Reset();
-	$plugin->run();
+	$plugin->fpr_run_main();
 
 }
 
