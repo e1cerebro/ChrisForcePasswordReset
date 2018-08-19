@@ -9,8 +9,8 @@
  * @link       #
  * @since      1.0.0
  *
- * @package    Chris_Force_Password_Reset
- * @subpackage Chris_Force_Password_Reset/includes
+ * @package    fpr_Chris_Force_Password_Reset
+ * @subpackage fpr_Chris_Force_Password_Reset/includes
  */
 
 /**
@@ -23,11 +23,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Chris_Force_Password_Reset
- * @subpackage Chris_Force_Password_Reset/includes
+ * @package    fpr_Chris_Force_Password_Reset
+ * @subpackage fpr_Chris_Force_Password_Reset/includes
  * @author     ChristianNwachukwu <nwachukwu16@gmail.com>
  */
-class Chris_Force_Password_Reset {
+class fpr_Chris_Force_Password_Reset {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -74,10 +74,10 @@ class Chris_Force_Password_Reset {
 		}
 		$this->plugin_name = 'chris-force-password-reset';
 
-		$this->load_dependencies();
-		$this->set_locale();
-		$this->define_admin_hooks();
-		$this->define_public_hooks();
+		$this->fpr_load_dependencies();
+		$this->fpr_set_locale();
+		$this->fpr_define_admin_hooks();
+		$this->fpr_define_public_hooks();
 
 	}
 
@@ -88,8 +88,8 @@ class Chris_Force_Password_Reset {
 	 *
 	 * - fpr_Chris_Force_Password_Reset_Loader. Orchestrates the hooks of the plugin.
 	 * - fpr_Chris_Force_Password_Reset_i18n. Defines internationalization functionality.
-	 * - Chris_Force_Password_Reset_Admin. Defines all hooks for the admin area.
-	 * - Chris_Force_Password_Reset_Public. Defines all hooks for the public side of the site.
+	 * - fpr_Chris_Force_Password_Reset_Admin. Defines all hooks for the admin area.
+	 * - fpr_Chris_Force_Password_Reset_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -97,7 +97,7 @@ class Chris_Force_Password_Reset {
 	 * @since    1.0.0
 	 * @access   private
 	 */
-	private function load_dependencies() {
+	private function fpr_load_dependencies() {
 
 		/**
 		 * The class responsible for orchestrating the actions and filters of the
@@ -135,7 +135,7 @@ class Chris_Force_Password_Reset {
 	 * @since    1.0.0
 	 * @access   private
 	 */
-	private function set_locale() {
+	private function fpr_set_locale() {
 
 		$plugin_i18n = new fpr_Chris_Force_Password_Reset_i18n();
 
@@ -150,9 +150,9 @@ class Chris_Force_Password_Reset {
 	 * @since    1.0.0
 	 * @access   private
 	 */
-	private function define_admin_hooks() {
+	private function fpr_define_admin_hooks() {
 
-		$plugin_admin = new Chris_Force_Password_Reset_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new fpr_Chris_Force_Password_Reset_Admin( $this->fpr_get_plugin_name(), $this->fpr_get_version() );
 
 		$this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -174,9 +174,9 @@ class Chris_Force_Password_Reset {
 	 * @since    1.0.0
 	 * @access   private
 	 */
-	private function define_public_hooks() {
+	private function fpr_define_public_hooks() {
 
-		$plugin_public = new Chris_Force_Password_Reset_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new fpr_Chris_Force_Password_Reset_Public( $this->fpr_get_plugin_name(), $this->fpr_get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -199,7 +199,7 @@ class Chris_Force_Password_Reset {
 	 * @since     1.0.0
 	 * @return    string    The name of the plugin.
 	 */
-	public function get_plugin_name() {
+	public function fpr_get_plugin_name() {
 		return $this->plugin_name;
 	}
 
@@ -209,7 +209,7 @@ class Chris_Force_Password_Reset {
 	 * @since     1.0.0
 	 * @return    fpr_Chris_Force_Password_Reset_Loader    Orchestrates the hooks of the plugin.
 	 */
-	public function get_loader() {
+	public function fpr_get_loader() {
 		return $this->loader;
 	}
 
@@ -219,7 +219,7 @@ class Chris_Force_Password_Reset {
 	 * @since     1.0.0
 	 * @return    string    The version number of the plugin.
 	 */
-	public function get_version() {
+	public function fpr_get_version() {
 		return $this->version;
 	}
 

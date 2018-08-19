@@ -6,8 +6,8 @@
  * @link       #
  * @since      1.0.0
  *
- * @package    Chris_Force_Password_Reset
- * @subpackage Chris_Force_Password_Reset/public
+ * @package    fpr_Chris_Force_Password_Reset
+ * @subpackage fpr_Chris_Force_Password_Reset/public
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    Chris_Force_Password_Reset
- * @subpackage Chris_Force_Password_Reset/public
+ * @package    fpr_Chris_Force_Password_Reset
+ * @subpackage fpr_Chris_Force_Password_Reset/public
  * @author     ChristianNwachukwu <nwachukwu16@gmail.com>
  */
-class Chris_Force_Password_Reset_Public {
+class fpr_Chris_Force_Password_Reset_Public {
 
 	/**
 	 * The ID of this plugin.

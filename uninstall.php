@@ -22,7 +22,7 @@
  * @link       #
  * @since      1.0.0
  *
- * @package    Chris_Force_Password_Reset
+ * @package    fpr_Chris_Force_Password_Reset
  */
 
 // If uninstall not called from WordPress, then exit.

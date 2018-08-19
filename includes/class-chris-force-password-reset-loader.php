@@ -6,8 +6,8 @@
  * @link       #
  * @since      1.0.0
  *
- * @package    Chris_Force_Password_Reset
- * @subpackage Chris_Force_Password_Reset/includes
+ * @package    fpr_Chris_Force_Password_Reset
+ * @subpackage fpr_Chris_Force_Password_Reset/includes
  */
 
 /**
@@ -17,8 +17,8 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    Chris_Force_Password_Reset
- * @subpackage Chris_Force_Password_Reset/includes
+ * @package    fpr_Chris_Force_Password_Reset
+ * @subpackage fpr_Chris_Force_Password_Reset/includes
  * @author     ChristianNwachukwu <nwachukwu16@gmail.com>
  */
 class fpr_Chris_Force_Password_Reset_Loader {

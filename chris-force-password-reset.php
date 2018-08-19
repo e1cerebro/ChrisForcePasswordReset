@@ -10,7 +10,7 @@
  *
  * @link              #
  * @since             1.0.0
- * @package           Chris_Force_Password_Reset
+ * @package           fpr_Chris_Force_Password_Reset
  *
  * @wordpress-plugin
  * Plugin Name:       Force WordPress Password Reset
@@ -75,7 +75,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-chris-force-password-reset
  */
 function fpr_run_chris_force_password_reset() {
 
-	$plugin = new Chris_Force_Password_Reset();
+	$plugin = new fpr_Chris_Force_Password_Reset();
 	$plugin->run();
 
 }

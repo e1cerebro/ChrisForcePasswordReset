@@ -6,8 +6,8 @@
  * @link       #
  * @since      1.0.0
  *
- * @package    Chris_Force_Password_Reset
- * @subpackage Chris_Force_Password_Reset/admin
+ * @package    fpr_Chris_Force_Password_Reset
+ * @subpackage fpr_Chris_Force_Password_Reset/admin
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
- * @package    Chris_Force_Password_Reset
- * @subpackage Chris_Force_Password_Reset/admin
+ * @package    fpr_Chris_Force_Password_Reset
+ * @subpackage fpr_Chris_Force_Password_Reset/admin
  * @author     ChristianNwachukwu <nwachukwu16@gmail.com>
  */
-class Chris_Force_Password_Reset_Admin {
+class fpr_Chris_Force_Password_Reset_Admin {
 
 	/**
 	 * The ID of this plugin.
