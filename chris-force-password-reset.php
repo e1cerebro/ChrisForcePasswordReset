@@ -35,28 +35,28 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'PLUGIN_NAME_VERSION', '1.0.0' );
+define( 'FPR_PLUGIN_NAME_VERSION', '1.0.0' );
 
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-chris-force-password-reset-activator.php
  */
-function activate_chris_force_password_reset() {
+function fpr_activate_chris_force_password_reset() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-chris-force-password-reset-activator.php';
-	Chris_Force_Password_Reset_Activator::activate();
+	fpr_Chris_Force_Password_Reset_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-chris-force-password-reset-deactivator.php
  */
-function deactivate_chris_force_password_reset() {
+function fpr_activate_chris_force_password_reset() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-chris-force-password-reset-deactivator.php';
-	Chris_Force_Password_Reset_Deactivator::deactivate();
+	fpr_Chris_Force_Password_Reset_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_chris_force_password_reset' );
-register_deactivation_hook( __FILE__, 'deactivate_chris_force_password_reset' );
+register_activation_hook( __FILE__, 'fpr_activate_chris_force_password_reset' );
+register_deactivation_hook( __FILE__, 'fpr_activate_chris_force_password_reset' );
 
 /**
  * The core plugin class that is used to define internationalization,
@@ -73,11 +73,11 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-chris-force-password-reset
  *
  * @since    1.0.0
  */
-function run_chris_force_password_reset() {
+function fpr_run_chris_force_password_reset() {
 
 	$plugin = new Chris_Force_Password_Reset();
 	$plugin->run();
 
 }
 
-run_chris_force_password_reset();
+fpr_run_chris_force_password_reset();

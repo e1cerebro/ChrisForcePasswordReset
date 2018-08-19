@@ -20,7 +20,7 @@
  * @subpackage Chris_Force_Password_Reset/includes
  * @author     ChristianNwachukwu <nwachukwu16@gmail.com>
  */
-class Chris_Force_Password_Reset_Deactivator {
+class fpr_Chris_Force_Password_Reset_Deactivator {
 
 	/**
 	 * Short Description. (use period)
