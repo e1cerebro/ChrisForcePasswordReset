@@ -50,13 +50,13 @@ function fpr_activate_chris_force_password_reset() {
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-chris-force-password-reset-deactivator.php
  */
-function fpr_activate_chris_force_password_reset() {
+function fpr_deactivate_chris_force_password_reset() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-chris-force-password-reset-deactivator.php';
 	fpr_Chris_Force_Password_Reset_Deactivator::deactivate();
 }
 
 register_activation_hook( __FILE__, 'fpr_activate_chris_force_password_reset' );
-register_deactivation_hook( __FILE__, 'fpr_activate_chris_force_password_reset' );
+register_deactivation_hook( __FILE__, 'fpr_deactivate_chris_force_password_reset' );
 
 /**
  * The core plugin class that is used to define internationalization,
