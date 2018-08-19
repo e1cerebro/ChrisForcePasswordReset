@@ -6,8 +6,8 @@
  * @link       #
  * @since      1.0.0
  *
- * @package    fpr_Chris_Force_Password_Reset
- * @subpackage fpr_Chris_Force_Password_Reset/public
+ * @package    FPR_Chris_Force_Password_Reset
+ * @subpackage FPR_Chris_Force_Password_Reset/public
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    fpr_Chris_Force_Password_Reset
- * @subpackage fpr_Chris_Force_Password_Reset/public
+ * @package    FPR_Chris_Force_Password_Reset
+ * @subpackage FPR_Chris_Force_Password_Reset/public
  * @author     ChristianNwachukwu <nwachukwu16@gmail.com>
  */
-class fpr_Chris_Force_Password_Reset_Public {
+class FPR_Chris_Force_Password_Reset_Public {
 
 	/**
 	 * The ID of this plugin.
@@ -65,10 +65,10 @@ class fpr_Chris_Force_Password_Reset_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in fpr_Chris_Force_Password_Reset_Loader as all of the hooks are defined
+		 * defined in FPR_Chris_Force_Password_Reset_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The fpr_Chris_Force_Password_Reset_Loader will then create the relationship
+		 * The FPR_Chris_Force_Password_Reset_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
@@ -88,10 +88,10 @@ class fpr_Chris_Force_Password_Reset_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in fpr_Chris_Force_Password_Reset_Loader as all of the hooks are defined
+		 * defined in FPR_Chris_Force_Password_Reset_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The fpr_Chris_Force_Password_Reset_Loader will then create the relationship
+		 * The FPR_Chris_Force_Password_Reset_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */

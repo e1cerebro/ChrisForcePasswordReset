@@ -10,7 +10,7 @@
  *
  * @link              #
  * @since             1.0.0
- * @package           fpr_Chris_Force_Password_Reset
+ * @package           FPR_Chris_Force_Password_Reset
  *
  * @wordpress-plugin
  * Plugin Name:       Elcerebro Force Password Reset
@@ -43,7 +43,7 @@ define( 'FPR_PLUGIN_NAME_VERSION', '1.0.0' );
  */
 function fpr_activate_chris_force_password_reset() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-chris-force-password-reset-activator.php';
-	fpr_Chris_Force_Password_Reset_Activator::fpr_activate();
+	FPR_Chris_Force_Password_Reset_Activator::fpr_activate();
 }
 
 /**
@@ -52,7 +52,7 @@ function fpr_activate_chris_force_password_reset() {
  */
 function fpr_deactivate_chris_force_password_reset() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-chris-force-password-reset-deactivator.php';
-	fpr_Chris_Force_Password_Reset_Deactivator::fpr_deactivate();
+	FPR_Chris_Force_Password_Reset_Deactivator::fpr_deactivate();
 }
 
 register_activation_hook( __FILE__, 'fpr_activate_chris_force_password_reset' );
@@ -75,7 +75,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-chris-force-password-reset
  */
 function fpr_run_chris_force_password_reset() {
 
-	$plugin = new fpr_Chris_Force_Password_Reset();
+	$plugin = new FPR_Chris_Force_Password_Reset();
 	$plugin->fpr_run_main();
 
 }

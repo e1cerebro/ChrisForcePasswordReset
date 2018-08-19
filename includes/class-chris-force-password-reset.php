@@ -9,8 +9,8 @@
  * @link       #
  * @since      1.0.0
  *
- * @package    fpr_Chris_Force_Password_Reset
- * @subpackage fpr_Chris_Force_Password_Reset/includes
+ * @package    FPR_Chris_Force_Password_Reset
+ * @subpackage FPR_Chris_Force_Password_Reset/includes
  */
 
 /**
@@ -23,11 +23,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    fpr_Chris_Force_Password_Reset
- * @subpackage fpr_Chris_Force_Password_Reset/includes
+ * @package    FPR_Chris_Force_Password_Reset
+ * @subpackage FPR_Chris_Force_Password_Reset/includes
  * @author     ChristianNwachukwu <nwachukwu16@gmail.com>
  */
-class fpr_Chris_Force_Password_Reset {
+class FPR_Chris_Force_Password_Reset {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -35,7 +35,7 @@ class fpr_Chris_Force_Password_Reset {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      fpr_Chris_Force_Password_Reset_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      FPR_Chris_Force_Password_Reset_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -86,10 +86,10 @@ class fpr_Chris_Force_Password_Reset {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - fpr_Chris_Force_Password_Reset_Loader. Orchestrates the hooks of the plugin.
-	 * - fpr_Chris_Force_Password_Reset_i18n. Defines internationalization functionality.
-	 * - fpr_Chris_Force_Password_Reset_Admin. Defines all hooks for the admin area.
-	 * - fpr_Chris_Force_Password_Reset_Public. Defines all hooks for the public side of the site.
+	 * - FPR_Chris_Force_Password_Reset_Loader. Orchestrates the hooks of the plugin.
+	 * - FPR_Chris_Force_Password_Reset_i18n. Defines internationalization functionality.
+	 * - FPR_Chris_Force_Password_Reset_Admin. Defines all hooks for the admin area.
+	 * - FPR_Chris_Force_Password_Reset_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -122,14 +122,14 @@ class fpr_Chris_Force_Password_Reset {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-chris-force-password-reset-public.php';
 
-		$this->loader = new fpr_Chris_Force_Password_Reset_Loader();
+		$this->loader = new FPR_Chris_Force_Password_Reset_Loader();
 
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the fpr_Chris_Force_Password_Reset_i18n class in order to set the domain and to register the hook
+	 * Uses the FPR_Chris_Force_Password_Reset_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -137,7 +137,7 @@ class fpr_Chris_Force_Password_Reset {
 	 */
 	private function fpr_set_locale() {
 
-		$plugin_i18n = new fpr_Chris_Force_Password_Reset_i18n();
+		$plugin_i18n = new FPR_Chris_Force_Password_Reset_i18n();
 
 		$this->loader->fpr_add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -152,7 +152,7 @@ class fpr_Chris_Force_Password_Reset {
 	 */
 	private function fpr_define_admin_hooks() {
 
-		$plugin_admin = new fpr_Chris_Force_Password_Reset_Admin( $this->fpr_get_plugin_name(), $this->fpr_get_version() );
+		$plugin_admin = new FPR_Chris_Force_Password_Reset_Admin( $this->fpr_get_plugin_name(), $this->fpr_get_version() );
 
 		$this->loader->fpr_add_action('admin_enqueue_scripts', $plugin_admin, 'fpr_enqueue_styles' );
 		$this->loader->fpr_add_action('admin_enqueue_scripts', $plugin_admin, 'fpr_enqueue_scripts' );
@@ -176,7 +176,7 @@ class fpr_Chris_Force_Password_Reset {
 	 */
 	private function fpr_define_public_hooks() {
 
-		$plugin_public = new fpr_Chris_Force_Password_Reset_Public( $this->fpr_get_plugin_name(), $this->fpr_get_version() );
+		$plugin_public = new FPR_Chris_Force_Password_Reset_Public( $this->fpr_get_plugin_name(), $this->fpr_get_version() );
 
 		$this->loader->fpr_add_action( 'wp_enqueue_scripts', $plugin_public, 'fpr_enqueue_styles' );
 		$this->loader->fpr_add_action( 'wp_enqueue_scripts', $plugin_public, 'fpr_enqueue_scripts' );
@@ -207,7 +207,7 @@ class fpr_Chris_Force_Password_Reset {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    fpr_Chris_Force_Password_Reset_Loader    Orchestrates the hooks of the plugin.
+	 * @return    FPR_Chris_Force_Password_Reset_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function fpr_get_loader() {
 		return $this->loader;

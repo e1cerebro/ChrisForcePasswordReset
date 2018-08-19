@@ -8,8 +8,8 @@
  * @link       #
  * @since      1.0.0
  *
- * @package    fpr_Chris_Force_Password_Reset
- * @subpackage fpr_Chris_Force_Password_Reset/public/partials
+ * @package    FPR_Chris_Force_Password_Reset
+ * @subpackage FPR_Chris_Force_Password_Reset/public/partials
  */
 ?>
 

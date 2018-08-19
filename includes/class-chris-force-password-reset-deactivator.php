@@ -6,8 +6,8 @@
  * @link       #
  * @since      1.0.0
  *
- * @package    fpr_Chris_Force_Password_Reset
- * @subpackage fpr_Chris_Force_Password_Reset/includes
+ * @package    FPR_Chris_Force_Password_Reset
+ * @subpackage FPR_Chris_Force_Password_Reset/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's deactivation.
  *
  * @since      1.0.0
- * @package    fpr_Chris_Force_Password_Reset
- * @subpackage fpr_Chris_Force_Password_Reset/includes
+ * @package    FPR_Chris_Force_Password_Reset
+ * @subpackage FPR_Chris_Force_Password_Reset/includes
  * @author     ChristianNwachukwu <nwachukwu16@gmail.com>
  */
-class fpr_Chris_Force_Password_Reset_Deactivator {
+class FPR_Chris_Force_Password_Reset_Deactivator {
 
 	/**
 	 * Short Description. (use period)
