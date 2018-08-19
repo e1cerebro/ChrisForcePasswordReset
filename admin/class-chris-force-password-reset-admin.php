@@ -59,7 +59,7 @@ class fpr_Chris_Force_Password_Reset_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function enqueue_styles() {
+	public function fpr_enqueue_styles() {
 
 		/**
 		 * This function is provided for demonstration purposes only.
@@ -82,7 +82,7 @@ class fpr_Chris_Force_Password_Reset_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function enqueue_scripts() {
+	public function fpr_enqueue_scripts() {
 
 		/**
 		 * This function is provided for demonstration purposes only.
@@ -101,7 +101,7 @@ class fpr_Chris_Force_Password_Reset_Admin {
 	}
 
 
-	public function add_action_links( $links ) {
+	public function fpr_add_action_links( $links ) {
 		/*
 		*  Documentation : https://codex.wordpress.org/Plugin_API/Filter_Reference/plugin_action_links_(plugin_file_name)
 		*/
@@ -162,6 +162,16 @@ class fpr_Chris_Force_Password_Reset_Admin {
 		}
 	}
 
+
+	
+	/**
+		 * Runs when the user resets the wordpress password after the link has been sent
+		 * 
+		 * LOGIC BEHIND THE FUNCTION
+		 * ----------------------------------------------------------
+		 *
+		 * @return void
+	 */
 	public function fpr_password_reset_called( $user, $new_pass ) {
 		// Do something before password reset.
 		$user_id = $user->ID;
@@ -207,7 +217,7 @@ class fpr_Chris_Force_Password_Reset_Admin {
 	 * 
 	 * @return array; 
 	 */
-	public function validate($input) {
+	public function fpr_validate_settings($input) {
 		// create an array to save the inputs.      
 		$valid = array();
 	
@@ -229,8 +239,8 @@ class fpr_Chris_Force_Password_Reset_Admin {
 	 * @return void
 	 * 
 	 */
-	public function options_update() {
-		register_setting($this->plugin_name, $this->plugin_name, array($this, 'validate'));
+	public function fpr_options_update() {
+		register_setting($this->plugin_name, $this->plugin_name, array($this, 'fpr_validate_settings'));
 	}
 
 
@@ -246,7 +256,7 @@ class fpr_Chris_Force_Password_Reset_Admin {
 	 * 
 	 * @return void
 	 */
-	public function valid_password_reset() {
+	public function fpr_validate_password_reset() {
 
 		 $options = get_option($this->plugin_name);
 
@@ -265,7 +275,7 @@ class fpr_Chris_Force_Password_Reset_Admin {
 				(1 == $author  		 && current_user_can('author')) || 
 				(1 == $contributor   && current_user_can('contributor')) ||
 				(1 == $subscriber	 && current_user_can('subscriber')) ||
-				$this->get_password_reset_days() != ''
+				$this->fpr_get_password_reset_days() != ''
 			)
 		  ){
 				
@@ -285,14 +295,14 @@ class fpr_Chris_Force_Password_Reset_Admin {
 				)
 			){
 
-				$this->redirect_user();
+				$this->fpr_redirect_user();
 			}
 
 			//Get the number of days between now and when the password was last updated.
-			$proceed = $this->get_date_diff();
+			$proceed = $this->fpr_get_date_diff();
 
 			//If the days are greater than what was specified by the admin.
-			if( $proceed > $this->get_password_reset_days()){
+			if( $proceed > $this->fpr_get_password_reset_days()){
 	 
 					 if( 
 						(1 == $administrator && current_user_can('administrator')) ||
@@ -303,7 +313,7 @@ class fpr_Chris_Force_Password_Reset_Admin {
 					 ){
 						//Redirect the user to the reset password page.
 						
-						$this->redirect_user();
+						$this->fpr_redirect_user();
 					 }
 			}
  
@@ -326,14 +336,14 @@ class fpr_Chris_Force_Password_Reset_Admin {
 	 *
 	 * @return void
 	 */
-	function my_error_notice() {
+	function fpr_dashboard_error_notice() {
 			//Check is the number of days is due for changes
-			if($this->get_date_diff() > $this->get_password_reset_days() ){
+			if($this->fpr_get_date_diff() > $this->fpr_get_password_reset_days() ){
 			//Create a URL link to reset password.
 			$url = wp_lostpassword_url( $redirect );
 			$reset_link = "<a href={$url}>  RESET PASSWORD</a>";
 			//Calculate the number of days past
-			$days_past  = $this->get_date_diff() - $this->get_password_reset_days();
+			$days_past  = $this->fpr_get_date_diff() - $this->fpr_get_password_reset_days();
 			//Display the notification message.
 		?>
 			 <div class="notice error is-dismissible">
@@ -359,7 +369,7 @@ class fpr_Chris_Force_Password_Reset_Admin {
 	 * @return integer
 	 */
 
-	private function get_date_diff(){
+	private function fpr_get_date_diff(){
 
 		//configure the option value
 		$current_logged_in_user_id = get_current_user_id()."_password_update_timestamp";
@@ -393,7 +403,7 @@ class fpr_Chris_Force_Password_Reset_Admin {
 	 * redirect the user to the password reset page and exit the page
 	 */
 
-	private function redirect_user(){
+	private function fpr_redirect_user(){
 
 		$user = get_current_user_id();
 
@@ -414,7 +424,7 @@ class fpr_Chris_Force_Password_Reset_Admin {
 	 *
 	 * @return integer
 	 */
-	private function get_password_reset_days(){
+	private function fpr_get_password_reset_days(){
 		
 		$options = get_option($this->plugin_name);
 		$number_of_days = $options['number_of_days'];

@@ -154,17 +154,17 @@ class fpr_Chris_Force_Password_Reset {
 
 		$plugin_admin = new fpr_Chris_Force_Password_Reset_Admin( $this->fpr_get_plugin_name(), $this->fpr_get_version() );
 
-		$this->loader->fpr_add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
-		$this->loader->fpr_add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+		$this->loader->fpr_add_action('admin_enqueue_scripts', $plugin_admin, 'fpr_enqueue_styles' );
+		$this->loader->fpr_add_action('admin_enqueue_scripts', $plugin_admin, 'fpr_enqueue_scripts' );
 		$this->loader->fpr_add_action('profile_update', $plugin_admin, 'fpr_profile_update' );
 		$this->loader->fpr_add_action('admin_menu', $plugin_admin, 'fpr_settings_page' );
-		$this->loader->fpr_add_action('admin_init', $plugin_admin, 'options_update');
-		$this->loader->fpr_add_action('admin_init', $plugin_admin, 'valid_password_reset');
-		$this->loader->fpr_add_action('admin_notices', $plugin_admin, 'my_error_notice');
+		$this->loader->fpr_add_action('admin_init', $plugin_admin, 'fpr_options_update');
+		$this->loader->fpr_add_action('admin_init', $plugin_admin, 'fpr_validate_password_reset');
+		$this->loader->fpr_add_action('admin_notices', $plugin_admin, 'fpr_dashboard_error_notice');
 		$this->loader->fpr_add_action('password_reset', $plugin_admin, 'fpr_password_reset_called', 10, 2);
 
 		$plugin_basename = plugin_basename( plugin_dir_path( __DIR__ ) . $this->plugin_name . '.php' );
-		$this->loader->fpr_add_filter( 'plugin_action_links_' . $plugin_basename, $plugin_admin, 'add_action_links' );
+		$this->loader->fpr_add_filter( 'plugin_action_links_' . $plugin_basename, $plugin_admin, 'fpr_add_action_links' );
  	}
 
 	/**
