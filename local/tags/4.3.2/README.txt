@@ -1,9 +1,9 @@
-=== Chris Force Password Reset ===
+=== Force Password Reset ===
 Contributors: nwachuku, 
-Tags: password, reset, security, login, protection
+Tags: password, reset, security, login
 Requires at least: 4.6
-Tested up to: 4.7
-Stable tag: 4.3
+Tested up to: 4.9.2
+Stable tag: 4.3.2
 Requires PHP: 5.2.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -33,17 +33,17 @@ Currently the plugin only supports the default WordPress user capabilities
 
 = How does the plugin work? =
 
-When the plugin is installed, visit the plugin menu under the settings page.
-Select the number of days before the password will be reset
-Select the user capabilities that are required to update their password.
-if you are among the user group, you will be logged out of WordPress dashboard  and redirected to the password reset page
-Enter your WordPress account email in the text field and submit.
-You will be sent a password reset link to that email
-Update your password and try to login again.
+1. When the plugin is installed, visit the plugin menu under the settings page.
+2. Select the number of days before the password will be reset
+3. Select the user capabilities that are required to update their password.
+4. if you are among the user group, you will be logged out of WordPress dashboard  and redirected to the password reset page
+5. Enter your WordPress account email in the text field and submit.
+6. You will be sent a password reset link to that email
+7. Update your password and try to login again.
 
 
 == Screenshots ==
-1-This is the main settings controls of the plugin
-2-The menu link for the plugin can be found under the settings menu
-3-Sample image of a saved setup.
-4-The plugin name under your plugin menu.
+1. This is the main settings controls of the plugin
+2. The menu link for the plugin can be found under the settings menu
+3. Sample image of a saved setup.
+4. The plugin name under your plugin menu.

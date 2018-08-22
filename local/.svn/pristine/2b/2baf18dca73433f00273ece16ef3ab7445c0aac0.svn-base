@@ -13,10 +13,10 @@
  * @package           FPR_Chris_Force_Password_Reset
  *
  * @wordpress-plugin
- * Plugin Name:       Chris Force Password Reset
+ * Plugin Name:       Force Password Reset
  * Plugin URI:        #
  * Description:       This plugin is designed to remind WordPress users to reset their password after certain number of days.
- * Version:           1.0.0
+ * Version:           4.3.2
  * Author:            Christian Nwachukwu
  * Author URI:        https://lets-talk.netlify.com
  * License:           GPL-2.0+
